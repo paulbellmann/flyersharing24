@@ -122,6 +122,7 @@ function makeDocs() {
             "./css/**/*",
             "./js/**/*",
             "./vendor/**/*",
+            "./img/**/*",
             "./index.html",
             "./entdecken.html",
             "./erstellen.html",

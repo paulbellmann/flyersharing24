@@ -3,8 +3,12 @@
 
   $('.js-trigger-search').on('click', function (e) {
     e.preventDefault();
-
     $('.results').show();
+  });
+
+  $('.js-trigger-calc').on('click', function (e) {
+    e.preventDefault();
+    $('.create-result').show();
   });
 
   // Smooth scrolling using jQuery easing

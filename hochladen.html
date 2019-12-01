@@ -39,10 +39,10 @@
                     <a class="nav-link py-3 px-0 px-lg-3 rounded" href="erstellen.html">Erstellen</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="hochladen.html">Hochladen</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="hochladen.html">Hochladen</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded active" href="entdecken.html">Entdecken</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="entdecken.html">Entdecken</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Über Uns</a>
@@ -60,9 +60,7 @@
 <section class="page-section">
     <div class="container">
 
-        <h1 class="mb-3 text-center">Entdecken</h1>
-
-        <h3 class="mb-3">Ihre Suche</h3>
+        <h1 class="mb-3 text-center">Angebot hochladen</h1>
 
         <form>
             <div class="form-group row">
@@ -109,91 +107,92 @@
             </div>
 
             <div class="form-group row">
+                <label for="inputStueckzahl" class="col-sm-2 col-form-label">Stückzahl</label>
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-lg btn-primary js-trigger-search">Suchen</button>
+                    <input type="email" class="form-control" id="inputStueckzahl">
+                </div>
+            </div>
+
+        </form>
+
+        <h1 class="mb-3 text-center">Zum Flyer</h1>
+
+        <form>
+            <div class="form-group row">
+                <label for="inputArt" class="col-sm-2 col-form-label">Art</label>
+                <div class="col-sm-10">
+                    <select id="inputArt" class="form-control">
+                        <option selected>---</option>
+                        <option>Flyer</option>
+                        <option>Brief</option>
+                        <option>Magazin</option>
+                        <option>Postkarte</option>
+                        <option>Zeitung</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputFalzart" class="col-sm-2 col-form-label">Größe & Falzart</label>
+                <div class="col-sm-10">
+                    <select id="inputFalzart" class="form-control">
+                        <option selected>---</option>
+                        <option>A3</option>
+                        <option>A4</option>
+                        <option>A5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputGewicht" class="col-sm-2 col-form-label">Gewicht</label>
+                <div class="col-sm-10">
+                    <select id="inputGewicht" class="form-control">
+                        <option selected>---</option>
+                        <option>unter 20</option>
+                        <option>bis 31</option>
+                        <option>bis 51</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-lg btn-primary js-trigger-calc">Ausrechnen</button>
                 </div>
             </div>
         </form>
 
-    </div>
-</section>
+        <div class="create-result text-center my-5">
+            <h1 class="mb-3">Preisvorschlag: XXX €</h1>
 
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModal">
+                Inserat hochladen & Kosten sparen!
+            </button>
+        </div>
 
-<section class="page-section results">
-    <div class="container">
-        <h3 class="mb-3">Es gibt 2 Ergebnisse zu Ihrer Suche</h3>
-
-        <!-- Portfolio Grid Items -->
-        <div class="row mb-3">
-            <div class="col-lg-12 border border-secondary p-3">
-                <div class="row">
-                    <div class="col-lg-6 my-auto">
-                        <h5>Immobiilienunternehmen</h5>
-                        <div class="btn btn-lg btn-primary">
-                            Angebot öffnen und Kosten sparen
-                        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Angebot erfolgreich hochgeladen</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Verteilung in:</div>
-                            <div class="col-lg-6">Hamburg</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Einschmeißen in:</div>
-                            <div class="col-lg-6">Privat</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Regionen:</div>
-                            <div class="col-lg-6">XXXXX, XXXXX, XXXXX</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Stückzahl:</div>
-                            <div class="col-lg-6">5.000 - 15.000</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Preis für den Verteiler:</div>
-                            <div class="col-lg-6">1000€</div>
-                        </div>
+                    <div class="modal-body">
+                        Ihr Inserat wurde erfolgreich hochgeladen. Es ist jetzt für 60 Tage öffentlich einsehbar.
+                        Sie können den Zeitraum vor Ablauf verlängern. Nun können sich andere Verteiler mit Ihnen in
+                        Verbindung setzen.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Okay<!/button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-12 border border-secondary p-3">
-                <div class="row">
-                    <div class="col-lg-6 my-auto">
-                        <h5>Pizzaria</h5>
-                        <div class="btn btn-lg btn-primary">
-                            Angebot öffnen und Kosten sparen
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Verteilung in:</div>
-                            <div class="col-lg-6">Hamburg</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Einschmeißen in:</div>
-                            <div class="col-lg-6">Privat + Gewerbe</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Regionen:</div>
-                            <div class="col-lg-6">XXXXX, XXXXX, XXXXX</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Stückzahl:</div>
-                            <div class="col-lg-6">30.000 - 50.000</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 text-black-50">Preis für den Verteiler:</div>
-                            <div class="col-lg-6">4000€</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
     </div>
 </section>
 

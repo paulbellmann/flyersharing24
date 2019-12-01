@@ -113,6 +113,20 @@ function js() {
     .pipe(browsersync.stream());
 }
 
+// Build docs/ folder
+function makeDocs() {
+    del(["./docs/"]);
+
+    return gulp
+        .src([
+            "./css/**/*",
+            "./js/**/*",
+            "./vendor/**/*",
+            "./index.html",
+        ], {base: './'})
+        .pipe(gulp.dest("./docs/"))
+}
+
 // Watch files
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
@@ -124,11 +138,13 @@ function watchFiles() {
 const vendor = gulp.series(clean, modules);
 const build = gulp.series(vendor, gulp.parallel(css, js));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+const docs = gulp.series(makeDocs);
 
 // Export tasks
 exports.css = css;
 exports.js = js;
 exports.clean = clean;
+exports.docs = docs;
 exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;

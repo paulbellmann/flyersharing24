@@ -123,6 +123,9 @@ function makeDocs() {
             "./js/**/*",
             "./vendor/**/*",
             "./index.html",
+            "./entdecken.html",
+            "./erstellen.html",
+            "./hochladen.html",
         ], {base: './'})
         .pipe(gulp.dest("./docs/"))
 }
